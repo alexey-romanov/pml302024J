@@ -1,5 +1,5 @@
 import { getClearColor } from "./math.js";
-import { Pane } from "tweakpane";
+// import { Pane } from "tweakpane";
 
 function main() {
   const element = document.querySelector("#glcanvas");
@@ -14,14 +14,14 @@ function main() {
   // gl.clearColor(1, 0, 0, 1);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  const pane = new Pane();
+  // const pane = new Pane();
 
   const PARAMS = {
     background: { r: 1.0, g: 0, b: 0.3 },
   };
-  pane.addBinding(PARAMS, "background", {
-    color: { type: "float" },
-  });
+  // pane.addBinding(PARAMS, "background", {
+  //   color: { type: "float" },
+  // });
 
   const anim = () => {
     gl.clearColor(
@@ -43,3 +43,7 @@ function main() {
 window.addEventListener("load", () => {
   main();
 });
+
+export function onButtonClick() {
+  console.log("AB C");
+}
